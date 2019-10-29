@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/header';
+import HomePage from './pages/homepage';
+import Pricing from './pages/pricing';
+import CreateFreeAccount from './pages/create-free-account';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      header: {
+        links: [
+          { text: "Home", route: "/", page: HomePage },
+          { text: "Solutions", route: "/#", page: Pricing },
+          { text: "Pricing", route: "/pricing", page: Pricing },
+          { text: "Contact Us", route: "/#", page: Pricing },
+          { text: "Create Free Account", route: "/create-free-account", page: CreateFreeAccount, customClass: "btn btn-sm btn-success btnCreateAccount" },
+        ]
+      }
+    }
+  }
+
+  // HELPER TO SORT LINKS FROM THE STATE BY ROUTE (DESCENDING)
+  order(a, b) {
+    return a.route < b.route ? 1 : (a.route > b.route ? -1 : 0);
+  }
+  
+  render() { 
+    let linksArr = this.state.header.links.filter(link => link.text === link.text);
+    return (
+      <Router>
+        <Header links={this.state.header.links} />
+          <Switch>
+            { 
+              // RETURNS THE 'HomePage'(or '/' route) AS THE LAST ITEM. TO MAKE ROUTER SWITCH WORK PROPERLY
+              linksArr.sort(this.order).map((link, i) => {
+                return <Route key={i} path={link.route}>
+                        <link.page />
+                      </Route>
+              })
+            }
+          </Switch>
+      </Router>
+    );
+  }
 }
 
 export default App;

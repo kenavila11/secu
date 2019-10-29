@@ -1,0 +1,233 @@
+@import './partial';
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+
+// OVERRIDES
+.btn {
+    border-radius: 2px;
+    font-family: "Montserrat"
+}
+.btn-sm {
+    padding: 5px 30px !important;
+    font-size: 13px;
+}
+.btn-md {
+    padding: 10px 30px !important;
+    font-size: 13px;
+}
+.btn-success {
+    background-color: $bg-light-green;
+    border-color: $bg-light-green;
+}
+.btn-secondary {
+    background-color: $bg-pale-green;
+    border-color: $bg-pale-green;
+}
+.form-control {
+    border-radius: 0px;
+}
+// END OF OVERRIDES
+
+.light-text { color: $text-light-green }
+.pale-text { color: $text-pale-green }
+.dark-text { color: $text-dark-green }
+
+.justify-content-vertical-center {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.center-auto {
+    margin: 0 auto;
+}
+.left-auto {
+    margin-left: auto;
+}
+.right-auto {
+    margin-right: auto;
+}
+
+.secu-header {
+
+    position: relative;
+    z-index: 1;
+
+    * {
+        font-family: "Montserrat";
+        color: #fff !important;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .navbar {
+        padding: 26px 0px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        
+        .navbar-brand {
+            font-weight: bold;
+            position: relative;
+            padding-right: 21px;
+
+            &:after {
+                @include absolute-element(url(../images/svg/line.svg), auto, auto, (top: 4px, right: 0px)); //(content, width, height, (position))
+            }
+        }
+
+        .contactNumber {
+            position: relative;
+            padding-left: 21px;
+
+            &:before {
+                @include absolute-element(url(../images/svg/phone.svg), auto, auto, (top: 3px, left: 0px)); //(content, width, height, (position))
+            }
+        }
+    
+        .nav-link {
+            margin: 0px 6px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .btnCreateAccount {
+            margin: 0px 0px 0px 25px !important;
+        }
+    }
+
+    &.pricing {
+        background-color: #EEF1EC;
+
+        .navbar {
+            border-bottom: 1px solid rgba(131,167,165,0.2);
+            
+            .navbar-brand {
+                color: $text-pale-green !important;
+    
+                &:after {
+                    content: url(../images/svg/line-green.svg);
+                }
+    
+            }
+            
+            .contactNumber {
+                color: $text-pale-green !important;
+            
+                &:before {
+                    content: url(../images/svg/phone-green.svg);
+                }
+            }
+    
+            .navbar-nav {
+    
+                .nav-link:not(:last-child) {
+                    color: $text-pale-green !important;
+                }
+            }
+        }
+
+    }
+
+}
+
+.secu-footer {
+    position: relative;
+    padding: 60px 0px;
+    background-image: url(../images/home-banner.png);
+    @include bg-img-style(cover, no-repeat, 100% 33%);
+
+    &:before {
+        @include absolute-element("", 100%, 100%, (top: 0px, left: 0px)); //(content, width, height, (position))
+        @include bg-semi-transparent(#EEF1EC, 0.95);
+    }
+
+    .secu-card {
+
+        label {
+            font-size: 28px;
+            font-weight: lighter;
+            margin-bottom: 0px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+.secu-homepage {
+
+    .section4 {
+        background-color: #EEF1EC;
+        padding: 61px 0px;
+
+        .secu-card {
+
+            label {
+                font-size: 32px;
+                font-weight: lighter;
+            }
+        }
+    }
+}
+
+.secu-createFreeAccount {
+
+    .banner-content {
+
+        .bc-title {
+            h1 {
+                font-weight: lighter !important;
+            }
+        }
+    }
+
+    .createFreeAccount-content {
+
+        .secu-card {
+            margin-bottom: 30px;
+
+            label {
+                font-size: 24px;
+                margin-bottom: 0px;
+                color: $text-pale-green;
+            }
+        }
+        
+        .secu-titleAndDesc {
+            h2 {
+                font-weight: bold;
+                margin-bottom: 30px;;
+            }
+        }
+
+        form {
+
+            label {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .policy {
+                font-size: 14px;
+            }
+
+            .form-control {
+                &::placeholder {
+                    color: $text-pale-green;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.secu-pricing {
+    background-color: #EEF1EC;
+
+    .features {}
+}

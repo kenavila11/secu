@@ -1,0 +1,28 @@
+@import './partial';
+
+.secu-featureCard {
+    border: 1px solid #C1D3D2;
+    text-align: center;
+    padding: 27px 0px 31px;
+    background-color: #fff;
+
+    label {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 65px;
+        font-family: "Montserrat";
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 14px;
+        margin-top: -17px;
+        margin-bottom: 145px;
+    }
+
+    a {
+
+    }
+}

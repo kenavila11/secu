@@ -1,0 +1,25 @@
+@import './partial';
+
+.secu-titleAndDesc {
+
+    h2 {
+        font-weight: lighter;
+    }
+    p {
+        font-size: 15px;
+    }
+
+    .mini-border{
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+
+        &:after {
+            content: url(../images/svg/mini-border.svg);
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}

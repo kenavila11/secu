@@ -1,0 +1,41 @@
+@import './partial';
+
+
+.secu-banner {
+
+    @include bg-img-style(cover, no-repeat, top);
+    position: relative;
+    margin-top: -$header-height;
+    width: 100%;
+
+    // &:before {
+    //     @include absolute-element("", 100%, 100%, 0, 0); //(content, width, height, top, left)
+    //     @include bg-semi-transparent($bg-dark-green, 0.9);
+    // }
+
+    .banner-overlay {
+        @include absolute-element("", 100%, 100%, (top: 0, left: 0)); //(content, width, height, (position))
+    }
+
+    .banner-content {
+        position: relative;
+        padding-top: $header-height;
+
+        .bc-title, .bc-description {
+            color: #fff;
+        }
+
+        .bc-description {
+            p {
+                margin-bottom: 33px;
+            }
+        }
+
+        .bc-button {
+            a {
+                font-size: 14px;
+                padding: 14px 44px;
+            }
+        }
+    }
+}

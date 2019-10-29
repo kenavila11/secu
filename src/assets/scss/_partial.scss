@@ -1,0 +1,30 @@
+$bg-light-green: #6FB048;
+$bg-pale-green: #83A7A5;
+$bg-dark-green: #2D6E70;
+
+$text-light-green: #6FB048;
+$text-pale-green: #83A7A5;
+$text-dark-green: #0F5F5C;
+
+$header-height: 83.33px;
+
+@mixin bg-semi-transparent($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+@mixin bg-img-style($bg-size, $bg-repeat, $bg-position) {
+    background-size: $bg-size;
+    background-repeat: $bg-repeat;
+    background-position: $bg-position;
+}
+
+@mixin absolute-element($content, $width, $height, $position) {
+    content: $content;
+    position: absolute;
+    width: $width;
+    height: $height;
+
+    @each $property, $value in $position {
+        #{$property}: $value;
+    }
+}
