@@ -15,7 +15,7 @@ class CreateFreeAccount extends Component {
             OverlayOpacity: 0.7
         },
         Content: {
-            Title: "Create your Sec-U Account to get access to:",
+            Title: "Create your Sec-U Account",
             Cards: [
                 {
                     Title: "Product Downloads",
@@ -52,13 +52,13 @@ class CreateFreeAccount extends Component {
                                 <TitleAndDesc 
                                     title={this.state.Content.Title}
                                 />
-                                {this.state.Content.Cards.map((card, i) => 
+                                {/* {this.state.Content.Cards.map((card, i) => 
                                     <Card 
                                         key={i}
                                         title={card.Title}
                                         description={card.Description}
                                         />
-                                        )}
+                                        )} */}
                             </div>
                             <div className="col-md-6">
                                 <form action="">

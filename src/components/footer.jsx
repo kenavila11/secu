@@ -9,12 +9,13 @@ class Footer extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
-                            <div className="justify-content-vertical-center">
+                            {/* <div className="justify-content-vertical-center">
                                 <Card
                                     title="Do You Like Sec-U Download it Now"
                                     description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
                                 />
-                            </div>
+                            </div> */}
+                            <p className="pale-text align-items-center d-flex h-100">&copy; 2019 Copyright - All rights reserved</p>
                         </div>
                         <div className="col-md-4">
                             <div className="justify-content-vertical-center">

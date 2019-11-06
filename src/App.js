@@ -4,6 +4,8 @@ import Header from './components/header';
 import HomePage from './pages/homepage';
 import Pricing from './pages/pricing';
 import CreateFreeAccount from './pages/create-free-account';
+import Solutions from './pages/solutions';
+import Testing from './pages/testing';
 
 import {
   BrowserRouter as Router,
@@ -18,10 +20,11 @@ class App extends Component {
       header: {
         links: [
           { text: "Home", route: "/", page: HomePage },
-          { text: "Solutions", route: "/#", page: Pricing },
+          { text: "Solutions", route: "/solutions", page: Solutions },
           { text: "Pricing", route: "/pricing", page: Pricing },
           { text: "Contact Us", route: "/#", page: Pricing },
           { text: "Create Free Account", route: "/create-free-account", page: CreateFreeAccount, customClass: "btn btn-sm btn-success btnCreateAccount" },
+          { text: "TESTING", route: "/testing", page: Testing, visible: false },
         ]
       }
     }

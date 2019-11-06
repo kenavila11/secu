@@ -37,6 +37,8 @@ h2 { font-size: 32px; }
 .pale-text { color: $text-pale-green }
 .dark-text { color: $text-dark-green }
 
+.bg-cream { background-color: $bg-cream; }
+
 .justify-content-vertical-center {
     display: flex;
     height: 100%;
@@ -99,7 +101,8 @@ h2 { font-size: 32px; }
         }
     }
 
-    &.pricing {
+    &.pricing,
+    &.solutions {
         background-color: #EEF1EC;
 
         .navbar {
@@ -227,7 +230,6 @@ h2 { font-size: 32px; }
 }
 
 .secu-pricing {
-    background-color: #EEF1EC;
 
     .features {}
 }

@@ -4,16 +4,17 @@ import Banner from '../components/banner';
 import TitleAndDesc from '../components/title-and-description';
 import Card from '../components/card';
 import Spacer from '../components/spacer';
+import NewsLetterForm from '../components/newsletter-form';
 
 class HomePage extends Component {
     state = {
         Banner: {
             Image: require('../assets/images/home-banner.png'),
-            Title: "Availability for Any App, Any <br/>Data, Accross Any Cloud",
-            Description: "Built on a foundation of continuous data protection, Sec-U converges <br/>disaster recovery, backup, and workload mobility. Built-in orchestration <br/>and automation provide you one simple, agile solution to save time, <br/>resources and costs.",
+            Title: "Availability for Any App, Any <br/>Data, Across Any Cloud",
+            Description: "Built on a foundation of continuous data protection, Sec-U converges <br/>disaster recovery and backup. Built-in orchestration <br/>and automation provide you one simple, agile solution to save time, <br/>resources and costs.",
             Height: "100", //percentage,
             ButtonText: "WATCH NOW",
-            ButtonLink: "Javascript:void(0)",
+            ButtonLink: "#",
             OverlayOpacity: 0.9
         },
         Content: {
@@ -103,7 +104,7 @@ class HomePage extends Component {
                             />
                         </div>
                     </div>
-                    <Spacer size="55"/>
+                    {/* <Spacer size="55"/>
                     <div className="row">
                         { this.state.Content.Section2.Cards.map((card, i) => 
                             <div key={i} className="col-md-4">
@@ -116,8 +117,8 @@ class HomePage extends Component {
                             </div>
                         )}
                     </div>
-                    <Spacer size="30"/>
-                    <div className="row">
+                    <Spacer size="30"/> */}
+                    {/* <div className="row">
                         <div className="col text-center">
                             <img src={require("../assets/images/svg/reversedTSign.svg")} alt=""/>
                         </div>
@@ -135,21 +136,22 @@ class HomePage extends Component {
                                 <Spacer size="59"/>
                             </div>
                         )}
-                    </div>
+                    </div> */}
                 </div>
                 <Spacer size="80"/>
                 <div className="section4">
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-6">
-                                <div className="justify-content-vertical-center">
+                            <div className="col-md-5 d-flex align-items-center">
+                                {/* <div className="justify-content-vertical-center">
                                     <Card
                                         title={this.state.Content.Section4.Title}
                                         description={this.state.Content.Section4.Description}
                                         />
-                                </div>
+                                </div> */}
+                                <NewsLetterForm />
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-md-6 offset-md-1">
                                 <img className="w-100" src={this.state.Content.Section4.Image} alt=""/>
                             </div>
                         </div>

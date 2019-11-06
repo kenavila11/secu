@@ -11,7 +11,7 @@ class Pricing extends Component {
         Features: [
             {
                 Title: "Basic",
-                Price: "$199",
+                Price: "$69.9",
                 Per: "Month",
                 ButtonText: "Select Plan"
             },
@@ -31,7 +31,7 @@ class Pricing extends Component {
     }
     render() { 
         return (
-            <div className="secu-pricing">
+            <div className="secu-pricing bg-cream">
                 <div className="container">
                     <div className="row features">
                         <div className="col text-center">
@@ -40,10 +40,10 @@ class Pricing extends Component {
                                 title="Download the Full-Featured Free Trial"
                             />
                             <Spacer size="55" />
-                            <TitleAndDesc 
+                            {/* <TitleAndDesc 
                                 description="Cras mattis consectetur purus sit amet fermentum."
                             />
-                            <Spacer size="50" />
+                            <Spacer size="50" /> */}
                         </div>
                     </div>
                     <div className="row justify-content-center">
@@ -68,6 +68,28 @@ class Pricing extends Component {
                         </div>
                     </div>
                 </div>
+                {/* <div className="inclusions">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <TitleAndDesc
+                                    title="Included With All Plans"
+                                    align="center"
+                                    miniBorder
+                                />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-4">
+                                <Card
+                                    img={require('../assets/images/svg/check.svg')}
+                                    title="Maecenas faucibus mollis interdum Cras justo"
+                                    align="left"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
                 <Footer />
             </div>
         );
