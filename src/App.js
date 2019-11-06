@@ -5,6 +5,7 @@ import HomePage from './pages/homepage';
 import Pricing from './pages/pricing';
 import CreateFreeAccount from './pages/create-free-account';
 import Solutions from './pages/solutions';
+import ContactUs from './pages/contact-us';
 import Testing from './pages/testing';
 
 import {
@@ -22,7 +23,7 @@ class App extends Component {
           { text: "Home", route: "/", page: HomePage },
           { text: "Solutions", route: "/solutions", page: Solutions },
           { text: "Pricing", route: "/pricing", page: Pricing },
-          { text: "Contact Us", route: "/#", page: Pricing },
+          { text: "Contact Us", route: "/contact-us", page: ContactUs },
           { text: "Create Free Account", route: "/create-free-account", page: CreateFreeAccount, customClass: "btn btn-sm btn-success btnCreateAccount" },
           { text: "TESTING", route: "/testing", page: Testing, visible: false },
         ]
