@@ -5,14 +5,15 @@ import { useLocation } from 'react-router-dom';
 
 function Header(props) {
     const state = {
-        currentRoute: (useLocation().pathname).split("/").pop(),
+        logo: require("../assets/images/logo.png"),
+        currentRoute: (useLocation().pathname).split("/").pop()
     }
 
     return (
         <div className={`secu-header ${state.currentRoute}`}>
             <div className="container">
                 <Navbar bg="transparent" expand="lg" className="px-0">
-                    <Navbar.Brand href="#home">SEC-U</Navbar.Brand>
+                    <Navbar.Brand className="text-capitalize" href="#home"><img className="header-logo" src={state.logo} alt=""/>SEC-U DRaas</Navbar.Brand>
                     <span className="contactNumber">+62 202 555 0117</span>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
